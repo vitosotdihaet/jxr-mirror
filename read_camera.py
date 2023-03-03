@@ -13,39 +13,11 @@ class Keycode(IntEnum):
     QUIT = ord('q')
 
 
-def list_ports(): # taken from https://stackoverflow.com/questions/57577445/list-available-cameras-opencv-python
-    is_working = True
-    curr_id = 0
-    working_ports = []
-    while is_working:
-        cam = cv2.VideoCapture(curr_id)
-
-        if not cam.isOpened():
-            is_working = False
-            print(f"Port {curr_id} is not working.")
-        else:
-            is_reading, _ = cam.read()
-
-            w = cam.get(3)
-            h = cam.get(4)
-
-            if is_reading:
-                print(f"Port {curr_id} is working ({w} x {h})")
-                working_ports.append(curr_id)
-
-        curr_id += 1
-    return working_ports
-
-
 def change_cam_id(cam_id, cam, negative=False):
     if negative:
-        new_cam_id = max(0, cam_id - 1)
+        new_cam_id = cam_id - 1
     else:
-        new_cam_id = min(255, cam_id + 1) # you don't have 256 cameras, get real
-
-    if new_cam_id == cam_id:
-        print(f'Can\'t go to new camera id. Going to previous one: {cam_id}...')
-        return cam_id, cam
+        new_cam_id = cam_id + 1
 
     new_cam = cv2.VideoCapture(new_cam_id)
 
