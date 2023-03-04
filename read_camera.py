@@ -5,7 +5,6 @@ from enum import IntEnum
 
 WINDOW_NAME = 'debug'
 
-
 class Keycode(IntEnum):
     PREV_CAM = ord('w')
     NEXT_CAM = ord('e')
@@ -39,7 +38,6 @@ _, frame = cam.read()
 if not cam.isOpened():
     print(f"Port {cam_id} is not working.")
     cam_id += 1
-
 
 cv2.imshow(WINDOW_NAME, frame)
 
