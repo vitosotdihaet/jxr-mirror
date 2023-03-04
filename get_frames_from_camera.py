@@ -5,8 +5,6 @@ from ml import process_img
 from enum import IntEnum
 
 
-WINDOW_NAME = 'debug'
-
 class Keycode(IntEnum):
     PREV_CAM = ord('w')
     NEXT_CAM = ord('e')
