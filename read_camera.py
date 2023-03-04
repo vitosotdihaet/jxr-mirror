@@ -3,13 +3,13 @@ import cv2
 from enum import IntEnum
 
 
-WINDOW_NAME = 'debug'
-
 class Keycode(IntEnum):
     PREV_CAM = ord('w')
     NEXT_CAM = ord('e')
 
     QUIT = ord('q')
+
+WINDOW_NAME = 'debug'
 
 
 def change_cam_id(cam_id, cam, negative=False):
