@@ -46,7 +46,7 @@ Development team.
 Akhmetshin Bulat - Teamlead;
 Ibragimov Roman  - ML-developer;
 Burganova Elina  - ML-developer;
-Klimenco Vitaliy - Backend-developer;
+Klimenko Vitaliy - Backend-developer;
 Morozov Dmitriy  - Software tester.
 
 ### Acknowledgments
