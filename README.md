@@ -41,6 +41,14 @@ If you have a suggestion that would make this better, please fork the repo and c
 
 Akhmetshin Bulat - project manager. If you have any questions regarding the project, you can ask me by sending an email to: sinntexxx@gmail.com
 
+Development team.
+
+Akhmetshin Bulat - Teamlead;
+Ibragimov Roman  - ML-developer;
+Burganova Elina  - ML-developer;
+Klimenco Vitaliy - Backend-developer;
+Morozov Dmitriy  - Software tester.
+
 ### Acknowledgments
 
 `Will be complited during development`
