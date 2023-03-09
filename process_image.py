@@ -21,3 +21,6 @@ def flip(img):
 
 def reverse_colors(img):
     return np.flip(img, axis=2)
+
+def blank(img):
+    return np.zeros_like(img)

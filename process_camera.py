@@ -5,18 +5,25 @@ from keycodes import Keycode
 from cam_funcs import change_cam_id
 
 # ml related imports
-from process_image import process_img
+import process_image as pi
 
+WINDOW_NAME = 'JXR'
 
 cam_id = 0 # choosing from which camera port to read
 
 cam = cv2.VideoCapture(cam_id)
 
+_, frame = cam.read()
+
+cv2.namedWindow(WINDOW_NAME, cv2.WND_PROP_FULLSCREEN)
+cv2.setWindowProperty(WINDOW_NAME, cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
+cv2.imshow(WINDOW_NAME, frame)
+
 while True:
     _, frame = cam.read()
 
 
-    processed_img = process_img(frame) # here all the processing happens
+    cv2.imshow(WINDOW_NAME, pi.blank(frame))
 
 
     key = cv2.waitKey(1)
