@@ -19,5 +19,5 @@ def random(img):
 def flip(img):
     return np.flip(img, axis=[0, 1])
 
-def negative(img):
+def reverse_colors(img):
     return np.flip(img, axis=2)
