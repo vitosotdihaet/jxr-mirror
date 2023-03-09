@@ -5,7 +5,7 @@ from keycodes import Keycode
 from cam_funcs import change_cam_id
 
 # ml related imports
-from ml import process_img
+from process_image import process_img
 
 
 cam_id = 0 # choosing from which camera port to read
