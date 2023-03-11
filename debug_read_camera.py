@@ -17,7 +17,7 @@ import process_image as pi
 
 
 WINDOW_NAME = 'debug'
-DISPLAY_ID = 1
+DISPLAY_ID = 0
 
 
 cam_id = 0
