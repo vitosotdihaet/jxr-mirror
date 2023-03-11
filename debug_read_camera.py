@@ -35,7 +35,7 @@ print(f'Current id of camera is {cam_id}, name of window is \'{WINDOW_NAME}\'')
 while cv2.getWindowProperty(WINDOW_NAME, 0) >= 0:
     _, frame = cam.read()
 
-    cv2.imshow(WINDOW_NAME, pi.reverse_colors(frame))
+    cv2.imshow(WINDOW_NAME, pi.reverse_color_bytes(frame))
 
     key = cv2.waitKey(1)
 

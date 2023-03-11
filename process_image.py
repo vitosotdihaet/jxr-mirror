@@ -1,16 +1,28 @@
+'''
+This piece of code is going to be used for getting information about read image
+
+Input and output images are numpy arrays
+
+The process is simple:
+    get image -> process it with ML model and get some kind of structure out of it ->
+    -> get tracking info directly from structure, get info about medicine from database by its name -> 
+    -> generate a new image -> return
+'''
+
+
 import numpy as np
 
 
+#! DEBUG PURPOSE FUNCTIONS!
 rng = np.random.default_rng()
 
-# img is a numpy array
-def process_img(img):
+def process(img):
     return img
 
 def high_contrast(img):
     return (img * 2).astype(np.uint8)
 
-def dim_img(img):
+def dim(img):
     return (img // 2).astype(np.uint8)
 
 def random(img):
@@ -19,7 +31,7 @@ def random(img):
 def flip(img):
     return np.flip(img, axis=[0, 1])
 
-def reverse_colors(img):
+def reverse_color_bytes(img):
     return np.flip(img, axis=2)
 
 def blank(img):
