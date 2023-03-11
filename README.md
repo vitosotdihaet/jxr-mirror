@@ -20,7 +20,8 @@ To run our project you will need the next list of dependencies:
 | -             | -       |
 | Python        | 3.10+   |
 | opencv-python | 4.7+    |
-| numpy         | 1.24    |
+| numpy         | 1.24+   |
+| screeninfo    | 0.8+   |
 
 
 # Contributing
