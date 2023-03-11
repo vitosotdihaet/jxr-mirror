@@ -47,5 +47,4 @@ while cv2.getWindowProperty(WINDOW_NAME, 0) >= 0:
         case Keycode.NEXT_CAM:
             cam_id, cam = change_cam_id(cam_id, cam)
 
-cam.release()
-cv2.destroyAllWindows()
+safe_exit(cam)
