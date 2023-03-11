@@ -12,6 +12,8 @@ import cv2
 from keycodes import Keycode
 from cam_funcs import change_cam_id
 
+import process_image as pi
+
 
 WINDOW_NAME = 'debug'
 
@@ -24,6 +26,8 @@ if not cam.isOpened():
     print(f"Port {cam_id} is not working.")
     cam_id += 1
 
+cv2.namedWindow(WINDOW_NAME, cv2.WND_PROP_FULLSCREEN)
+cv2.setWindowProperty(WINDOW_NAME, cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
 cv2.imshow(WINDOW_NAME, frame)
 
 print(f'Current id of camera is {cam_id}, name of window is \'{WINDOW_NAME}\'')
@@ -31,8 +35,7 @@ print(f'Current id of camera is {cam_id}, name of window is \'{WINDOW_NAME}\'')
 while cv2.getWindowProperty(WINDOW_NAME, 0) >= 0:
     _, frame = cam.read()
 
-    # this will be changed to show ml-processed image + original image
-    cv2.imshow(WINDOW_NAME, frame)
+    cv2.imshow(WINDOW_NAME, pi.reverse_color_bytes(frame))
 
     key = cv2.waitKey(1)
 
