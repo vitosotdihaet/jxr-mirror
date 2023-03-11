@@ -9,7 +9,6 @@ The process is simple:
     -> generate a new image -> return
 '''
 
-
 import numpy as np
 
 
