@@ -17,3 +17,8 @@ def change_cam_id(cam_id, cam, negative=False):
         print(f'Port {new_cam_id} is not working. Going to previous id: {cam_id}...')
         new_cam.release()
         return cam_id, cam
+
+def safe_exit(cam, exit_code=0):
+    cam.release()
+    cv2.destroyAllWindows()
+    exit(exit_code)
