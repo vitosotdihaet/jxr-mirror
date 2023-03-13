@@ -11,17 +11,22 @@ This is how to clone and set this project.
 ## Installation
 You can install and set up the project using this instruction:
 
-> Work in progress...
+```bash
+$ git clone https://gitlab.mai.ru/jxr/xr-ar-jxr23.git
+$ cd xr-ar-jxr23
+$ python -m pip install -r requirements.txt
+```
 
 ## Requirements
 To run our project you will need the next list of dependencies:
 
 | Package       | Version |
 | -             | -       |
-| Python        | 3.10+   |
+| Python        | 3.10    |
 | opencv-python | 4.7+    |
 | numpy         | 1.24+   |
-| screeninfo    | 0.8+   |
+| screeninfo    | 0.8+    |
+| easyocr       | 1.6+    |
 
 
 # Contributing
