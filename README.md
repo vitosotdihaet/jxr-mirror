@@ -14,7 +14,8 @@ You can install and set up the project using this instruction:
 ```bash
 $ git clone https://gitlab.mai.ru/jxr/xr-ar-jxr23.git
 $ cd xr-ar-jxr23
-$ python -m pip install -r requirements.txt
+$ ./setup.sh
+$ source .env/Scripts/activate
 ```
 
 ## Requirements
