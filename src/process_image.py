@@ -25,7 +25,7 @@ def dim(img):
     return (img // 2).astype(np.uint8)
 
 def random(img):
-    return rng.integers(50, high=100, size=img.shape).astype(np.uint8)
+    return rng.integers(0, high=256, size=img.shape).astype(np.uint8)
 
 def flip(img):
     return np.flip(img, axis=[0, 1])
