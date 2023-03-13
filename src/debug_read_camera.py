@@ -14,14 +14,13 @@ from cam_funcs import change_cam_id, safe_exit
 from choose_display import get_display
 
 import process_image as pi
-import numpy
-
+import ml.main
 
 WINDOW_NAME = 'debug'
-DISPLAY_ID = 1
+DISPLAY_ID = 0
 
 
-cam_id = 1
+cam_id = 0
 cam = cv2.VideoCapture(cam_id)
 
 _, frame = cam.read()
@@ -48,7 +47,9 @@ cv2.imshow(WINDOW_NAME, frame)
 print(f'Created a window on display {DISPLAY_ID}.\nCurrent id of camera is {cam_id}.\nName of window is \'{WINDOW_NAME}\'')
 
 while cv2.getWindowProperty(WINDOW_NAME, 0) >= 0:
-    cv2.imshow(WINDOW_NAME, pi.random(numpy.zeros(shape=[1080, 1920, 3])))
+    _, frame = cam.read()
+
+    cv2.imshow(WINDOW_NAME, ml.main.process(frame))
 
     key = cv2.waitKey(1)
 
