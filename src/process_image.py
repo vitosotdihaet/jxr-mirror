@@ -5,18 +5,19 @@ Input and output images are numpy arrays
 
 The process is simple:
     get image -> process it with ML model and get some kind of structure out of it ->
-    -> get tracking info directly from structure, get info about medicine from database by its name -> 
-    -> generate a new image -> return
+    -> get tracking info directly from structure (?), get info about medicine from database -> 
+    -> generate a new image -> return new image
 '''
 
 import numpy as np
 
 
-#! DEBUG PURPOSE FUNCTIONS!
-rng = np.random.default_rng()
-
 def process(img):
     return img
+
+
+#! DEBUG PURPOSE FUNCTIONS!
+rng = np.random.default_rng()
 
 def high_contrast(img):
     return (img * 2).astype(np.uint8)
