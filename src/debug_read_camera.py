@@ -14,7 +14,7 @@ from cam_funcs import change_cam_id, safe_exit
 from choose_display import get_display
 
 import process_image as pi
-
+import ml.main
 
 WINDOW_NAME = 'debug'
 DISPLAY_ID = 0
@@ -49,7 +49,7 @@ print(f'Created a window on display {DISPLAY_ID}.\nCurrent id of camera is {cam_
 while cv2.getWindowProperty(WINDOW_NAME, 0) >= 0:
     _, frame = cam.read()
 
-    cv2.imshow(WINDOW_NAME, pi.reverse_color_bytes(frame))
+    cv2.imshow(WINDOW_NAME, ml.main.process(frame))
 
     key = cv2.waitKey(1)
 
