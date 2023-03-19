@@ -1,3 +1,8 @@
+'''
+Translating read ml text for finding json file with medicine info
+'''
+
+
 cyr_to_lat = {
     'а': 'a',
     'б': 'b',
