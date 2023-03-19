@@ -51,8 +51,9 @@ If you have a suggestion that would make this better, please fork the repo and c
 
 
 # Progress Tracking
-- Trello: https://trello.com/b/R0rjA0P2/jxr
-- Miro:   https://miro.com/app/board/uXjVPh_uSg0=/
+- [Trello](https://trello.com/b/R0rjA0P2/jxr)
+- [Miro](https://miro.com/app/board/uXjVPh_uSg0=/)
+- [Notion](https://www.notion.so/8342c073f99c4854a7b9ef4034dcce37)
 
 
 # Contact
