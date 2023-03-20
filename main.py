@@ -22,8 +22,8 @@ while cv2.getWindowProperty(WINDOW_NAME, 0) >= 0:
     texts = ml.get_text_from_image(frame)
     for text in texts:
         filename = create_file_name(text)
-        opened_file = pf.find_file(filename)
-        frame = oi.text_to_img(opened_file)
+        medical_info = pf.get_info_from_file(filename)
+        frame = oi.text_to_img(medical_info)
     cv2.imshow(WINDOW_NAME, frame)
 
     key = cv2.waitKey(1)

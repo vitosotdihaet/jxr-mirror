@@ -1,8 +1,8 @@
 '''
 Finds best-matching json file by its name for further reading
 
-The output of function find_file is a python's class - file
+The output of function get_info_from_file is a python's array of info or idk
 '''
 
-def find_file(filename):
+def get_info_from_file(filename):
     pass
