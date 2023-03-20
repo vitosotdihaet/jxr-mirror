@@ -67,7 +67,10 @@ def number_to_cyrillic(text):
 def cyrillic_to_latin(text):
     new_text = ''
     for c in text:
-        new_text += cyr_to_lat[c]
+        if 'а' <= c <= 'я':
+            new_text += cyr_to_lat[c]
+        else:
+            new_text += c
     return new_text
 
 
@@ -83,4 +86,6 @@ def create_file_name(text: str):
 
 if __name__ == "__main__":
     s = input('Input a string in russian that needs to be translated: ')
-    print(create_file_name(s))
+    print(f'cyrillic_to_latin output: {cyrillic_to_latin(s)}')
+    print(f'number_to_cyrillic output: {number_to_cyrillic(s)}')
+    print(f'create_file_name output: {create_file_name(s)}')
